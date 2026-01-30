@@ -1,0 +1,32 @@
+title: Droid SDK
+description: TypeScript SDK for Factory Droid - build AI-powered bots and applications
+baseurl: "/droid-sdk"
+url: "https://codyde.github.io"
+
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - reference.md
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+github:
+  repository_url: https://github.com/codyde/droid-sdk
+  repository_name: codyde/droid-sdk
+  owner_name: codyde
