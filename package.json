@@ -1,0 +1,79 @@
+{
+  "name": "@openbuilder/droid-sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for Factory Droid - build AI-powered bots and applications",
+  "type": "module",
+  "main": "./dist/lib/index.js",
+  "types": "./dist/lib/index.d.ts",
+  "bin": {
+    "droid-bot": "./dist/cli/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./adapters": {
+      "types": "./dist/lib/adapters/index.d.ts",
+      "import": "./dist/lib/adapters/index.js"
+    },
+    "./droid": {
+      "types": "./dist/lib/droid/index.d.ts",
+      "import": "./dist/lib/droid/index.js"
+    },
+    "./skills": {
+      "types": "./dist/lib/skills/index.d.ts",
+      "import": "./dist/lib/skills/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli/index.js",
+    "dev": "tsx watch src/cli/index.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "factory",
+    "droid",
+    "ai",
+    "telegram",
+    "discord",
+    "bot",
+    "sdk",
+    "chatbot",
+    "assistant"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "discord.js": "^14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "discord.js": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
